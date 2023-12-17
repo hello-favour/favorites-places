@@ -1,5 +1,6 @@
 import 'package:favorites_places/screens/places_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final colorScheme = ColorScheme.fromSeed(
@@ -26,7 +27,11 @@ final theme = ThemeData().copyWith(
 );
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -41,3 +46,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//your flutter app is cool to use 
+//you write very simple code that has quick understanding 
